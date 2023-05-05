@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f48b9d4c.css",
+    "main.js": "/static/js/main.d2454559.js",
+    "static/media/creamy-mushroom-toast.jpg": "/static/media/creamy-mushroom-toast.8616868fe81df5c2cf67.jpg",
+    "static/media/accent-color-square.jpg": "/static/media/accent-color-square.8d6d5fddb1c200bc71af.jpg",
+    "static/media/instagram.svg": "/static/media/instagram.2a8971987a92f293d1f70ba71bb2b8af.svg",
+    "static/media/twitter.svg": "/static/media/twitter.9c16ee203ef718c654a09fa355e6f054.svg",
+    "static/media/account.svg": "/static/media/account.2eced19219bf04810bd8941a386828f1.svg",
+    "index.html": "/index.html",
+    "static/media/facebook.svg": "/static/media/facebook.c0525dc58e57b932db09167d03736d73.svg",
+    "static/media/clock.svg": "/static/media/clock.c42154815928aacd707027904001f590.svg",
+    "static/media/person.svg": "/static/media/person.3adfe233573a6fbfa69b96f897494c76.svg",
+    "static/media/logout.svg": "/static/media/logout.ff8f585d5abca8793cafc7b3e3421aef.svg",
+    "main.f48b9d4c.css.map": "/static/css/main.f48b9d4c.css.map",
+    "main.d2454559.js.map": "/static/js/main.d2454559.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f48b9d4c.css",
+    "static/js/main.d2454559.js"
+  ]
+}
