@@ -1,0 +1,7 @@
+The following links are to do with this project.
+
+Original recipicker repository: https://github.com/liamolohan/recipicker
+Original recipicker-backend repository: https://github.com/liamolohan/recipicker-backend
+
+Hosted frontend: https://recipicker.vercel.app/
+Hosted backend: https://recipicker-backend.vercel.app/api/recipes
