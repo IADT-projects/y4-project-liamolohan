@@ -1,0 +1,44 @@
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--spacing-md);
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--clr-neutral-dark);
+}
+
+.nav-link:where(:hover, :focus) {
+  color: var(--clr-accent-hover);
+}
+
+/*== Media Queries ==*/
+/*== MQ: For users that prefer dark mode ==*/
+@media (prefers-color-scheme: dark) {
+  .nav-link {
+    text-decoration: none;
+    color: var(--clr-neutral-light);
+  }
+
+  .nav-link:where(:hover, :focus) {
+    color: var(--clr-accent-hover);
+  }
+}
+
+/*== MQ: For screen widths of >= 90em (1440px) ==*/
+@media (min-width: 70em) {
+  .nav-list {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+}

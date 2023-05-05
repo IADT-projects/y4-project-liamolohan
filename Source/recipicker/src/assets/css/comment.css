@@ -1,0 +1,29 @@
+.comment {
+  border: 1px solid var(--clr-neutral-dark);
+  border-radius: 0.25rem;
+  margin-bottom: var(--spacing-lg);
+  padding-inline: var(--spacing-lg);
+}
+
+.comment-author {
+  color: var(--clr-accent);
+  padding-inline: var(--spacing-sm);
+  font-weight: var(--fw-bold);
+}
+
+.comment-text {
+  padding-block: var(--spacing-sm);
+}
+
+.comment .button {
+  padding-block: 0;
+  padding-inline: var(--spacing-sm);
+}
+
+/*== Media Queries ==*/
+/*== MQ: For users that prefer dark mode ==*/
+@media (prefers-color-scheme: dark) {
+  .comment {
+    border-color: var(--clr-neutral-light);
+  }
+}

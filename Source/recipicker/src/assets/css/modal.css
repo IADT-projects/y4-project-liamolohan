@@ -1,0 +1,33 @@
+.modal {
+  padding: var(--spacing-lg);
+  border-radius: 1rem;
+  z-index: 4000;
+  position: absolute;
+  inset: 1rem;
+  min-width: 30rem;
+}
+
+.modal-wrapper {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.tab:hover {
+  color: var(--clr-accent-hover);
+}
+
+/*== Media Queries ==*/
+/*== MQ: For users that prefer dark mode ==*/
+@media (prefers-color-scheme: dark) {
+}
+
+/*== MQ: For screen widths of >= 90em (1440px) ==*/
+@media (min-width: 70em) {
+  .modal {
+    transform-origin: center;
+  }
+
+  .multi-forms {
+    flex-direction: row;
+  }
+}

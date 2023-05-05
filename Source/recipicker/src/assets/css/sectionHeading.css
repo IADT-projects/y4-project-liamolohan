@@ -1,0 +1,25 @@
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding-block: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--clr-accent);
+  text-align: center;
+}
+
+.section-title {
+  color: var(--clr-accent);
+}
+
+/*== Media Queries ==*/
+/*== MQ: For users that prefer dark mode ==*/
+@media (prefers-color-scheme: dark) {
+}
+
+/*== MQ: For screen widths of >= 70em (1120px) ==*/
+@media (min-width: 70em) {
+  .section-heading {
+    grid-column: span 12;
+  }
+}

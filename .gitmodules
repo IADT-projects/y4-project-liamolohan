@@ -1,0 +1,6 @@
+[submodule "Source/Source/recipicker"]
+	path = Source/Source/recipicker
+	url = https://github.com/liamolohan/recipicker
+[submodule "Source/Source/recipicker-backend"]
+	path = Source/Source/recipicker-backend
+	url = https://github.com/liamolohan/recipicker-backend

@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+
+:root {
+  color-scheme: light dark;
+
+  --clr-neutral-light: hsl(0, 0%, 100%, 100%);
+  --clr-neutral-dark: hsl(0, 0%, 7%, 100%);
+  --clr-accent: hsl(0, 46%, 47%, 100%);
+  --clr-accent-hover: hsl(360, 46%, 60%, 100%);
+
+  --fw-reg: 400;
+  --fw-med: 600;
+  --fw-bold: 700;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+
+::selection {
+  background-color: var(--clr-accent-hover);
+  color: var(--clr-neutral-light);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--clr-neutral-dark);
+}
+
+/*== headings ==*/
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 10vw, 4rem);
+  line-height: 1;
+}
+
+h2 {
+  font-size: clamp(2rem, 10vw, 2.75rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 10vw, 2rem);
+}
+
+/* buttons */
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: 2rem;
+  background-color: transparent;
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  text-align: center;
+  font-weight: var(--fw-med);
+  color: var(--clr-accent);
+  transition: 0.4s ease;
+}
+
+.button[data-type="primary"] {
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral-light);
+}
+
+.button[data-type="primary"]:where(:hover, :focus) {
+  background-color: var(--clr-accent-hover);
+  transition: 0.4s ease;
+}
+
+.button[data-type="secondary"] {
+  background-color: var(--clr-neutral-light);
+  color: var(--clr-accent);
+}
+
+.button[data-type="secondary"]:where(:hover, :focus) {
+  background-color: var(--clr-accent-hover);
+  color: var(--clr-neutral-light);
+  transition: 0.4s ease;
+}
+
+/* Form */
+.form {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.form-register,
+.form-login {
+  padding-top: var(--spacing-md);
+}
+
+.form-create,
+.form-edit {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto, 1fr);
+}
+
+.form-comments {
+  grid-column: 1 / -1;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.form-create .form-section:nth-of-type(1n) {
+  grid-column: 1;
+}
+
+.form-create .form-section:nth-of-type(2n) {
+  grid-column: 2;
+}
+
+.form-edit .form-section:nth-of-type(1n) {
+  grid-column: 1;
+}
+
+.form-edit .form-section:nth-of-type(2n) {
+  grid-column: 2;
+}
+
+.form-section-ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  grid-column: 3;
+  grid-row: 1 / 6;
+}
+
+.form-section-ingredients .form-input {
+  height: 100%;
+}
+
+.form-section-header .button {
+  width: min-content;
+  padding-inline: var(--spacing-sm);
+  padding-block: 0;
+  color: var(--clr-neutral-dark);
+}
+
+.form-section-header .button:hover {
+  color: var(--clr-accent-hover);
+}
+
+.form-section-header .button:disabled {
+  color: var(--clr-neutral-light);
+}
+
+.form-input {
+  outline: 1px solid var(--clr-neutral-dark);
+  border: 0;
+  border-radius: 0.25rem;
+  padding-inline: var(--spacing-sm);
+}
+
+select.form-input {
+  padding-block: 0.25rem;
+}
+
+textarea.form-input {
+  resize: vertical;
+}
+
+.form-input:focus {
+  outline: 2px solid var(--clr-accent);
+}
+
+.form-buttons {
+  grid-column: 1 / -1;
+}
+
+.form-comments .form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: var(--spacing-sm);
+}
+
+/* Utility */
+.wrapper {
+  width: min(100% - 2rem, 90rem);
+  margin-inline: auto;
+  display: grid;
+  grid-column: 1fr;
+  gap: var(--spacing-md);
+}
+
+.flex-me {
+  display: flex;
+}
+
+.fw-med {
+  font-weight: var(--fw-med);
+}
+
+.pd-block-md {
+  padding-block: var(--spacing-md);
+}
+
+.active {
+  color: var(--clr-accent);
+  cursor: pointer;
+}
+
+.grid-span-full {
+  grid-column: 1 / -1;
+}
+
+.control-buttons {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.pd-l-1 {
+  padding-left: 1rem;
+}
+
+details > summary {
+  cursor: pointer;
+}
+/*== Media Queries ==*/
+/*== MQ: For users that prefer dark mode ==*/
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--clr-neutral-light);
+  }
+
+  .form-section-header .button {
+    color: var(--clr-neutral-light);
+  }
+
+  .form-section-header .button:disabled {
+    color: var(--clr-neutral-dark);
+  }
+
+  .form-input {
+    outline-color: var(--clr-neutral-light);
+  }
+}
+
+/*== MQ: For screen widths of >= 70em (1120px) ==*/
+@media (min-width: 60em) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .form-register {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,123 @@
+.recipe-show-details {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  font-size: 0.85rem;
+}
+
+.recipe-details-amount,
+.recipe-details-time {
+  display: flex;
+  align-items: center;
+  gap: 0.15em;
+}
+
+.recipe-details-time img {
+  fill: var(--clr-accent);
+}
+
+.ingredients {
+  background-color: var(--clr-accent);
+  padding-block: var(--spacing-lg);
+  color: var(--clr-neutral-light);
+  text-align: center;
+  position: relative;
+}
+
+.ingredients::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 -1rem 0 -4000px;
+  background-color: var(--clr-accent);
+}
+
+.instructions {
+  padding-block: var(--spacing-lg);
+}
+
+.instructions h2 {
+  color: var(--clr-accent);
+}
+
+.instructions-list ::marker {
+  color: var(--clr-accent);
+  font-weight: 700;
+}
+
+.ingredients-list {
+  margin-inline: 0;
+  list-style-type: none;
+}
+
+.instructions-list {
+  list-style-type: decimal;
+  margin-inline: 0;
+}
+
+.ingredients-item {
+  padding-block: var(--spacing-sm);
+}
+
+.instructions-item {
+  padding-block: var(--spacing-sm);
+  padding-left: var(--spacing-sm);
+}
+
+.ingredients-item:last-of-type,
+.instructions-item:last-of-type {
+  padding-bottom: 0;
+}
+
+.nutritional-information-heading,
+.comments-heading {
+  color: var(--clr-accent);
+}
+
+.nutritional-information-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nutritional-information-content {
+  border: 1px solid var(--clr-neutral-dark);
+  border-radius: 0.25rem;
+  padding-inline: var(--spacing-lg);
+}
+
+.nutritional-information-content legend,
+.nutritional-information-content p {
+  text-align: center;
+}
+
+.nutritional-information-content legend {
+  color: var(--clr-accent);
+  padding-inline: var(--spacing-sm);
+  font-weight: var(--fw-bold);
+}
+
+/*== Media Queries ==*/
+/*== MQ: For users that prefer dark mode ==*/
+@media (prefers-color-scheme: dark) {
+  .nutritional-information-content {
+    border-color: var(--clr-neutral-light);
+  }
+}
+
+@media (min-width: 60em) {
+  .ingredients {
+    grid-column: 1 / span 4;
+    padding-inline: var(--spacing-md);
+    text-align: left;
+  }
+
+  .instructions {
+    grid-column: 6 / -1;
+    padding-inline: var(--spacing-md);
+  }
+
+  .recipe-show-details {
+    justify-content: start;
+  }
+}

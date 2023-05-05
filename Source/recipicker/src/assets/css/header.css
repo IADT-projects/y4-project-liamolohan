@@ -1,0 +1,52 @@
+.primary-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: var(--spacing-md);
+  align-items: center;
+  padding-block: var(--spacing-lg);
+  color: var(--clr-neutral-dark);
+}
+
+.site-name {
+  color: var(--clr-neutral-dark);
+  margin-right: var(--spacing-lg);
+}
+
+.primary-header .site-name,
+.primary-header .button {
+  grid-row: 1;
+}
+
+.primary-header .primary-nav {
+  grid-column: span 3;
+  grid-row: 2;
+}
+
+.header-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-self: flex-end;
+}
+
+/*== Media Queries ==*/
+/*== MQ: For users that prefer dark mode ==*/
+@media (prefers-color-scheme: dark) {
+  .site-name {
+    color: var(--clr-neutral-light);
+  }
+}
+
+@media (min-width: 50em) {
+  .primary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: var(--spacing-lg);
+    color: var(--clr-neutral-dark);
+  }
+
+  .site-name {
+    margin: 0;
+  }
+}

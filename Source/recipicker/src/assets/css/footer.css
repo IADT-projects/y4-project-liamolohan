@@ -1,0 +1,100 @@
+.footer-content {
+  text-align: center;
+  padding-block: var(--spacing-lg);
+}
+
+.footer-content .footer-title,
+.footer h4 {
+  color: var(--clr-accent);
+}
+
+.footer-left {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-socmed {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+.footer-nav-list {
+  color: var(--clr-neutral-light);
+}
+
+.footer-nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding-inline: 0;
+  padding-block: var(--spacing-md);
+}
+
+.footer-nav-list:last-of-type {
+  padding: 0;
+}
+
+.footer-nav-item {
+  padding-block: 0.25rem;
+}
+
+.footer-nav-link {
+  text-decoration: none;
+  color: var(--clr-neutral-dark);
+  transition: 100ms ease-in;
+}
+
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+  color: var(--clr-accent-hover);
+  transition: 100ms ease-in;
+}
+
+.footer-copy {
+  width: 100%;
+  font-size: 0.85rem;
+  background-color: var(--clr-accent);
+  color: var(--clr-neutral-light);
+  text-align: center;
+  padding-block: var(--spacing-sm);
+}
+
+/*== Media Queries ==*/
+/*== MQ: For users that prefer dark mode ==*/
+@media (prefers-color-scheme: dark) {
+  .footer-form .form-input {
+    background: var(--clr-neutral-dark);
+  }
+
+  .footer-nav-link {
+    color: var(--clr-neutral-light);
+  }
+}
+
+@media (min-width: 50em) {
+  .footer-content {
+    grid-column: span 12;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-title {
+    text-align: left;
+  }
+
+  .footer-socmed {
+    justify-content: space-between;
+  }
+
+  .footer-lists {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: flex-end;
+  }
+
+  .footer-nav-list {
+    padding-block: 0;
+  }
+}
