@@ -1,6 +1,6 @@
-[submodule "Source/Source/recipicker"]
-	path = Source/Source/recipicker
+[submodule "Source/recipicker"]
+	path = Source/recipicker
 	url = https://github.com/liamolohan/recipicker
-[submodule "Source/Source/recipicker-backend"]
-	path = Source/Source/recipicker-backend
+[submodule "Source/recipicker-backend"]
+	path = Source/recipicker-backend
 	url = https://github.com/liamolohan/recipicker-backend
