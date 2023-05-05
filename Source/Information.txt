@@ -1,0 +1,8 @@
+Original recipicker repository: https://github.com/liamolohan/recipicker
+Original recipicker-backend repository: https://github.com/liamolohan/recipicker-backend
+
+Hosted frontend: https://recipicker.vercel.app/
+Hosted backend: https://recipicker-backend.vercel.app/api/recipes
+
+You can launch the frontend by running "npm start" in the folder
+You can launch the backend by running "npm run dev" in the backend folder
